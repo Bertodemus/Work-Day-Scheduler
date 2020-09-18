@@ -1,0 +1,102 @@
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+textarea{
+  border: none;
+  resize: none;
+  /* border-left: 1px solid black;
+  padding: 10px; */
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
+
+.description{
+  white-space: pre-wrap;
+}
+
+.time-block{
+  text-align: center;
+  border-radius: 15px;
+}
+
+/* .row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;;
+} */
+
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+.past {
+  background-color: #343a40;
+  color: white;
+}
+
+.present {
+  background-color: goldenrod;
+}
+
+.future {
+  background-color: #a4cca4;
+}
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06AED5;
+  color: white;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+}
+
+.minW {
+    /* max-width: 640px; */
+    min-width: 446px;
+}
+
+.txtAux {
+  color: goldenrod;
+}
+
+.txtAuxEye {
+  color: goldenrod;
+  font-size: 20px;
+}
+
+.txtAuxSave {
+  color: goldenrod;
+  font-size: 35px;
+}
+
+textarea {
+  background: transparent;
+}
+
+.card-header {
+  height: 60px;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: #343a40;
+  opacity: 1;
+}
+
+/* .past {
+  background-color: goldenrod;
+} */
