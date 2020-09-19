@@ -14,10 +14,10 @@
     <body class="container">
 
         <div class="row">
-            <div class="col-md-12 p-0">
+            <div class="col-sm-12 mt-5">
                 <nav class="navbar navbar-dark bg-dark">
                     <a class="navbar-brand" href="#"><i class="fas fa-drafting-compass txtAux"></i>&nbsp;ORCHESTRATE</a>
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav my-auto">
                         <li id="time" class="nav-item txtAux">
                         </li>
                     </ul>
@@ -25,33 +25,33 @@
             </div>
         </div>
 
-
         <div id="accordion" class="row">
-            <div  class="col-md-12 p-0">
-
+            <div  class="col-sm-12">
+                
                 <div class="card">
-                    <div class="card-header p-1" id="9AM">
+                    <div class="card-header" id="9AM">
                         <h5 class="mb-0">
-                            <div class="row">
+                            <div class="row my-auto">
                                 <div class="col-10">
-                                    <button class="btn btn-link collapsed text-left w-100 pt-3 headBtn" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
                                         <i class="far fa-clock txtAux"></i> 9:00 AM
                                     </button>
                                 </div>
-                                <div class="col-2 text-center">
-                                    <button id="btn9" class="btn btn-link btnEye w-75 mt-1 pt-1"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                <div class="col-2 text-right">
+                                    <button id="btn9" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
                                 </div>
                             </div>
                         </h5>
                     </div>
                     <div id="collapse9" class="collapse" aria-labelledby="9AM" data-parent="#accordion">
                         <div class="card-body p-0">
-                            <div class="form-row m-0">
-                                <div class="col-10 p-0">
-                                    <textarea id="9" class="form-control" id="exampleTextarea" rows="2"></textarea>
+                            <div class="form-row">
+                                <div class="col-10 pr-0">
+                                    <textarea id="9" class="form-control" rows="2"></textarea>
                                 </div>
-                                <div class="col-2 p-0 text-center">
-                                    <button type="button" class="btn btn-secondary h-100 w-100 btnSave" value="9"><i class="fas fa-save txtAuxSave"></i></button>
+                                <div class="col-2 text-center my-auto pl-0">
+                                    <button type="button" class="btn btnSave my-auto" value="9"><i class="fas fa-save txtAuxSave"></i></button>
+                                    <button type="button" class="btn btnDel my-auto" value="9"><i class="fas fa-trash-alt txtAuxDel"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -59,57 +59,59 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header p-1" id="10AM">
+                    <div class="card-header" id="10AM">
                         <h5 class="mb-0">
-                            <div class="row">
+                            <div class="row my-auto">
                                 <div class="col-10">
-                                    <button class="btn btn-link collapsed text-left w-100 pt-3 headBtn" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
                                         <i class="far fa-clock txtAux"></i> 10:00 AM
                                     </button>
                                 </div>
-                                <div class="col-2 text-center">
-                                    <button id="btn10" class="btn btn-link btnEye h-75 w-75 mt-1 pt-1"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                <div class="col-2 text-right">
+                                    <button id="btn10" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
                                 </div>
                             </div>
                         </h5>
                     </div>
                     <div id="collapse10" class="collapse" aria-labelledby="10AM" data-parent="#accordion">
                         <div class="card-body p-0">
-                            <div class="form-row m-0">
-                                <div class="col-10 p-0">
+                            <div class="form-row">
+                                <div class="col-10 pr-0">
                                     <textarea id="10" class="form-control" rows="2"></textarea>
                                 </div>
-                                <div class="col-2 p-0 text-center">
-                                    <button type="button" class="btn btn-secondary h-100 w-100 btnSave" value="10"><i class="fas fa-save txtAuxSave"></i></button>
+                                <div class="col-2 text-center my-auto pl-0">
+                                    <button type="button" class="btn btnSave my-auto" value="10"><i class="fas fa-save txtAuxSave"></i></button>
+                                    <button type="button" class="btn btnDel my-auto" value="10"><i class="fas fa-trash-alt txtAuxDel"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="card">
-                    <div class="card-header p-1" id="11AM">
+                    <div class="card-header" id="11AM">
                         <h5 class="mb-0">
-                            <div class="row">
+                            <div class="row my-auto">
                                 <div class="col-10">
-                                    <button class="btn btn-link collapsed text-left w-100 pt-3 headBtn" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
                                         <i class="far fa-clock txtAux"></i> 11:00 AM
                                     </button>
                                 </div>
-                                <div class="col-2 text-center">
-                                    <button id="btn11" class="btn btn-link btnEye h-75 w-75 mt-1 pt-1"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                <div class="col-2 text-right">
+                                    <button id="btn11" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
                                 </div>
                             </div>
                         </h5>
                     </div>
                     <div id="collapse11" class="collapse" aria-labelledby="11AM" data-parent="#accordion">
                         <div class="card-body p-0">
-                            <div class="form-row m-0">
-                                <div class="col-10 p-0">
+                            <div class="form-row">
+                                <div class="col-10 pr-0">
                                     <textarea id="11" class="form-control" rows="2"></textarea>
                                 </div>
-                                <div class="col-2 p-0 text-center">
-                                    <button type="button" class="btn btn-secondary h-100 w-100 btnSave" value="11"><i class="fas fa-save txtAuxSave"></i></button>
+                                <div class="col-2 text-center my-auto pl-0">
+                                    <button type="button" class="btn btnSave my-auto" value="11"><i class="fas fa-save txtAuxSave"></i></button>
+                                    <button type="button" class="btn btnDel my-auto" value="11"><i class="fas fa-trash-alt txtAuxDel"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -117,28 +119,29 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header p-1" id="12PM">
+                    <div class="card-header" id="12PM">
                         <h5 class="mb-0">
-                            <div class="row">
+                            <div class="row my-auto">
                                 <div class="col-10">
-                                    <button class="btn btn-link collapsed text-left w-100 pt-3 headBtn" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
                                         <i class="far fa-clock txtAux"></i> 12:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-center">
-                                    <button id="btn12" class="btn btn-link btnEye h-75 w-75 mt-1 pt-1"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                <div class="col-2 text-right">
+                                    <button id="btn12" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
                                 </div>
                             </div>
                         </h5>
                     </div>
                     <div id="collapse12" class="collapse" aria-labelledby="12PM" data-parent="#accordion">
                         <div class="card-body p-0">
-                            <div class="form-row m-0">
-                                <div class="col-10 p-0">
+                            <div class="form-row">
+                                <div class="col-10 pr-0">
                                     <textarea id="12" class="form-control" rows="2"></textarea>
                                 </div>
-                                <div class="col-2 p-0 text-center">
-                                    <button type="button" class="btn btn-secondary h-100 w-100 btnSave" value="12"><i class="fas fa-save txtAuxSave"></i></button>
+                                <div class="col-2 text-center my-auto pl-0">
+                                    <button type="button" class="btn btnSave my-auto" value="12"><i class="fas fa-save txtAuxSave"></i></button>
+                                    <button type="button" class="btn btnDel my-auto" value="12"><i class="fas fa-trash-alt txtAuxDel"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -146,58 +149,59 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header p-1" id="1PM">
+                    <div class="card-header" id="1PM">
                         <h5 class="mb-0">
-                            <div class="row">
+                            <div class="row my-auto">
                                 <div class="col-10">
-                                    <button class="btn btn-link collapsed text-left w-100 pt-3 headBtn" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
                                         <i class="far fa-clock txtAux"></i> 1:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-center">
-                                    <button id="btn13" class="btn btn-link btnEye h-75 w-75 mt-1 pt-1"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                <div class="col-2 text-right">
+                                    <button id="btn13" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
                                 </div>
                             </div>
                         </h5>
                     </div>
                     <div id="collapse13" class="collapse" aria-labelledby="1PM" data-parent="#accordion">
                         <div class="card-body p-0">
-                            <div class="form-row m-0">
-                                <div class="col-10 p-0">
+                            <div class="form-row">
+                                <div class="col-10 pr-0">
                                     <textarea id="13" class="form-control" rows="2"></textarea>
                                 </div>
-                                <div class="col-2 p-0 text-center">
-                                    <button type="button" class="btn btn-secondary h-100 w-100 btnSave" value="13"><i class="fas fa-save txtAuxSave"></i></button>
+                                <div class="col-2 text-center my-auto pl-0">
+                                    <button type="button" class="btn btnSave my-auto" value="13"><i class="fas fa-save txtAuxSave"></i></button>
+                                    <button type="button" class="btn btnDel my-auto" value="13"><i class="fas fa-trash-alt txtAuxDel"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                
                 <div class="card">
-                    <div class="card-header p-1" id="2PM">
+                    <div class="card-header" id="2PM">
                         <h5 class="mb-0">
-                            <div class="row">
+                            <div class="row my-auto">
                                 <div class="col-10">
-                                    <button class="btn btn-link collapsed text-left w-100 pt-3 headBtn" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
                                         <i class="far fa-clock txtAux"></i> 2:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-center">
-                                    <button id="btn14" class="btn btn-link btnEye h-75 w-75 mt-1 pt-1"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                <div class="col-2 text-right">
+                                    <button id="btn14" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
                                 </div>
                             </div>
                         </h5>
                     </div>
                     <div id="collapse14" class="collapse" aria-labelledby="2PM" data-parent="#accordion">
                         <div class="card-body p-0">
-                            <div class="form-row m-0">
-                                <div class="col-10 p-0">
+                            <div class="form-row">
+                                <div class="col-10 pr-0">
                                     <textarea id="14" class="form-control" rows="2"></textarea>
                                 </div>
-                                <div class="col-2 p-0 text-center">
-                                    <button type="button" class="btn btn-secondary h-100 w-100 btnSave" value="14"><i class="fas fa-save txtAuxSave"></i></button>
+                                <div class="col-2 text-center my-auto pl-0">
+                                    <button type="button" class="btn btnSave my-auto" value="14"><i class="fas fa-save txtAuxSave"></i></button>
+                                    <button type="button" class="btn btnDel my-auto" value="14"><i class="fas fa-trash-alt txtAuxDel"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -205,28 +209,29 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header p-1" id="3PM">
+                    <div class="card-header" id="3PM">
                         <h5 class="mb-0">
-                            <div class="row">
+                            <div class="row my-auto">
                                 <div class="col-10">
-                                    <button class="btn btn-link collapsed text-left w-100 pt-3 headBtn" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
                                         <i class="far fa-clock txtAux"></i> 3:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-center">
-                                    <button id="btn15" class="btn btn-link btnEye h-75 w-75 mt-1 pt-1"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                <div class="col-2 text-right">
+                                    <button id="btn15" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
                                 </div>
                             </div>
                         </h5>
                     </div>
                     <div id="collapse15" class="collapse" aria-labelledby="3PM" data-parent="#accordion">
                         <div class="card-body p-0">
-                            <div class="form-row m-0">
-                                <div class="col-10 p-0">
+                            <div class="form-row">
+                                <div class="col-10 pr-0">
                                     <textarea id="15" class="form-control" rows="2"></textarea>
                                 </div>
-                                <div class="col-2 p-0 text-center">
-                                    <button type="button" class="btn btn-secondary h-100 w-100 btnSave" value="15"><i class="fas fa-save txtAuxSave"></i></button>
+                                <div class="col-2 text-center my-auto pl-0">
+                                    <button type="button" class="btn btnSave my-auto" value="15"><i class="fas fa-save txtAuxSave"></i></button>
+                                    <button type="button" class="btn btnDel my-auto" value="15"><i class="fas fa-trash-alt txtAuxDel"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -234,28 +239,29 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header p-1" id="4PM">
+                    <div class="card-header" id="4PM">
                         <h5 class="mb-0">
-                            <div class="row">
+                            <div class="row my-auto">
                                 <div class="col-10">
-                                    <button class="btn btn-link collapsed text-left w-100 pt-3 headBtn" data-toggle="collapse" data-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
                                         <i class="far fa-clock txtAux"></i> 4:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-center">
-                                    <button id="btn16" class="btn btn-link btnEye h-75 w-75 mt-1 pt-1"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                <div class="col-2 text-right">
+                                    <button id="btn16" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
                                 </div>
                             </div>
                         </h5>
                     </div>
                     <div id="collapse16" class="collapse" aria-labelledby="4PM" data-parent="#accordion">
                         <div class="card-body p-0">
-                            <div class="form-row m-0">
-                                <div class="col-10 p-0">
+                            <div class="form-row">
+                                <div class="col-10 pr-0">
                                     <textarea id="16" class="form-control" rows="2"></textarea>
                                 </div>
-                                <div class="col-2 p-0 text-center">
-                                    <button type="button" class="btn btn-secondary h-100 w-100 btnSave" value="16"><i class="fas fa-save txtAuxSave"></i></button>
+                                <div class="col-2 text-center my-auto pl-0">
+                                    <button type="button" class="btn btnSave my-auto" value="16"><i class="fas fa-save txtAuxSave"></i></button>
+                                    <button type="button" class="btn btnDel my-auto" value="16"><i class="fas fa-trash-alt txtAuxDel"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -263,38 +269,36 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header p-1" id="5PM">
+                    <div class="card-header" id="5PM">
                         <h5 class="mb-0">
-                            <div class="row">
+                            <div class="row my-auto">
                                 <div class="col-10">
-                                    <button class="btn btn-link collapsed text-left w-100 pt-3 headBtn" data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
                                         <i class="far fa-clock txtAux"></i> 5:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-center">
-                                    <button id="btn17" class="btn btn-link btnEye h-75 w-75 mt-1 pt-1"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                <div class="col-2 text-right">
+                                    <button id="btn17" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
                                 </div>
                             </div>
                         </h5>
                     </div>
                     <div id="collapse17" class="collapse" aria-labelledby="5PM" data-parent="#accordion">
                         <div class="card-body p-0">
-                            <div class="form-row m-0">
-                                <div class="col-10 p-0">
+                            <div class="form-row">
+                                <div class="col-10 pr-0">
                                     <textarea id="17" class="form-control" rows="2"></textarea>
                                 </div>
-                                <div class="col-2 p-0 text-center">
-                                    <button type="button" class="btn btn-secondary h-100 w-100 btnSave" value="17"><i class="fas fa-save txtAuxSave"></i></button>
+                                <div class="col-2 text-center my-auto pl-0">
+                                    <button type="button" class="btn btnSave my-auto" value="17"><i class="fas fa-save txtAuxSave"></i></button>
+                                    <button type="button" class="btn btnDel my-auto" value="17"><i class="fas fa-trash-alt txtAuxDel"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-            </div>
-
-            
+            </div>          
         </div>
     
 

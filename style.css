@@ -1,42 +1,15 @@
 body {
+  height: 100%;
+  margin: 0;
   font-family: 'Nunito Sans', sans-serif;
-  background-color: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(black, #343a40);
 }
 
 textarea{
   border: none;
   resize: none;
-  /* border-left: 1px solid black;
-  padding: 10px; */
-}
-
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
-}
-
-.description{
-  white-space: pre-wrap;
-}
-
-.time-block{
-  text-align: center;
-  border-radius: 15px;
-}
-
-/* .row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-} */
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
 }
 
 .past {
@@ -52,23 +25,9 @@ textarea{
   background-color: #a4cca4;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
-}
-
-.minW {
-    /* max-width: 640px; */
+/* .minW {
     min-width: 446px;
-}
+} */
 
 .txtAux {
   color: goldenrod;
@@ -76,20 +35,21 @@ textarea{
 
 .txtAuxEye {
   color: goldenrod;
-  font-size: 20px;
+  font-size: 1.5em;
 }
 
 .txtAuxSave {
   color: goldenrod;
-  font-size: 35px;
+  font-size: 2em;
+}
+
+.txtAuxDel {
+  color: crimson;
+  font-size: 2em;
 }
 
 textarea {
   background: transparent;
-}
-
-.card-header {
-  height: 60px;
 }
 
 .form-control:disabled, .form-control[readonly] {
@@ -97,6 +57,14 @@ textarea {
   opacity: 1;
 }
 
-/* .past {
-  background-color: goldenrod;
+/* @media only screen and (max-width: 992px) {
+  .container {
+    min-width: 992px;
+  }
+} */
+/* 
+@media only screen and (max-width: 744px) {
+  .txtAuxSave, .txtAuxDel {
+      font-size: 1.2em;
+  }
 } */
