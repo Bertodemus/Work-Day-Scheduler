@@ -3,7 +3,7 @@ var time = new Date();
 var timeZoneOffset = time.getTimezoneOffset();
 var aaGlance = false;
 var hourlyPlans = new Object ();
-var log;
+// var log;
 
 
 //App startup
@@ -53,11 +53,24 @@ setInterval(function() {
 
 //data handling
 $(".btnSave").click(function (){
-    log = "log" + $(this).val();
+    var log = "log" + $(this).val();
     var hourQaulif = "#" + $(this).val();
+    var blank = "";
+    if ($("textarea"+hourQaulif).val() !== blank) {
     hourlyPlans[log] = $("textarea"+hourQaulif).val();
     localStorage.setItem('hourlyPlans', JSON.stringify(hourlyPlans));
-})
+    }
+});
+
+$(".btnDel").click(function (){
+    var log = "log" + $(this).val();
+    // var hourQaulif = "#" + $(this).val();
+    // var blank = "";
+    // if ($("textarea"+hourQaulif).val() !== blank) {
+    delete hourlyPlans[log];
+    localStorage.setItem('hourlyPlans', JSON.stringify(hourlyPlans));
+    // }
+});
 
 
 //planner presentation and data management
@@ -87,16 +100,18 @@ function initPlans() {
   // Function for rendering the data to the planner
   function renderPlans() {
     
-    function filterTypes(accepted) {
+    function filterLogs(accepted) {
         var result = {};
-        for (var logged in hourlyPlans)
-            if (accepted.indexOf(logged) > -1) 
+        for (var logged in hourlyPlans) {
+            if (accepted.indexOf(logged) > -1) {
                 result[logged] = hourlyPlans[logged];
+            }
+        }
         return result;
     }
 
     $("textarea").each(function() {
-        if (filterTypes(["log" + $(this).attr("id")]) !==  null) {
+        if (filterLogs(["log" + $(this).attr("id")]) !==  null) {
             $(this).text(hourlyPlans["log" + $(this).attr("id")]);
         }
     });

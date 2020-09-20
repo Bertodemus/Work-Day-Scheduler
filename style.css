@@ -7,6 +7,10 @@ body {
   background-image: linear-gradient(black, #343a40);
 }
 
+.container {
+  min-width: 500px;
+}
+
 textarea{
   border: none;
   resize: none;
@@ -25,10 +29,6 @@ textarea{
   background-color: #a4cca4;
 }
 
-/* .minW {
-    min-width: 446px;
-} */
-
 .txtAux {
   color: goldenrod;
 }
@@ -40,12 +40,12 @@ textarea{
 
 .txtAuxSave {
   color: goldenrod;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .txtAuxDel {
   color: crimson;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 textarea {
