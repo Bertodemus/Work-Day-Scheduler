@@ -3,7 +3,7 @@ var time = new Date();
 var timeZoneOffset = time.getTimezoneOffset();
 var aaGlance = false;
 var hourlyPlans = new Object ();
-// var log;
+var buttClicked;
 
 
 //App startup
@@ -12,11 +12,13 @@ $("textarea").each(function() {
     var currentHour = parseInt(moment().format("H"));
     if (parseInt($(this).attr("id")) < currentHour) {
         $(this).removeClass("present future").addClass("past");
+        this.setAttribute("placeholder", "");
         this.disabled = true;
     } else if (parseInt($(this).attr("id")) === currentHour){
         $(this).removeClass("past future").addClass("present");
         $("#collapse" + currentHour).addClass("show");
-        $("#btn" + currentHour).html("<i class='fas fa-eye txtAuxEye'></i>");
+        $("#eye" + currentHour).removeClass("fa-eye fa-eye-slash").addClass("fa-eye");
+        buttClicked = "#eye" + currentHour;
     } else {
         $(this).removeClass("past present").addClass("future");
     }
@@ -42,6 +44,29 @@ function glance() {
     }
 }
 
+$(".expand").click(eyes);
+
+function eyes() {
+    var eyeToPoke = $(this).data("slot");
+
+    if (aaGlance === true) {
+        $(".collapse").removeClass("show");
+        $(".txtAuxEye").each(function() {
+            $(this).removeClass("fa-eye fa-eye-slash").addClass("fa-eye-slash");
+        });
+        $("#eye"+eyeToPoke).removeClass("fa-eye-slash").addClass("fa-eye");
+        aaGlance = false;
+        buttClicked = "#eye" + eyeToPoke;
+        return;
+    } else if ($("#eye"+eyeToPoke).hasClass("fa-eye") === true) {
+        $("#eye"+eyeToPoke).removeClass("fa-eye").addClass("fa-eye-slash");
+    } else {
+        $("#eye"+eyeToPoke).removeClass("fa-eye-slash").addClass("fa-eye");
+        $(buttClicked).removeClass("fa-eye").addClass("fa-eye-slash");
+    }
+    buttClicked = "#eye" + eyeToPoke;
+}
+
 
 //Clock Updating
 $("#time").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a") + " " + moment.tz.zone(timeZone).abbr(timeZoneOffset));
@@ -57,6 +82,7 @@ $(".btnSave").click(function (){
     var hourQaulif = "#" + $(this).val();
     var blank = "";
     if ($("textarea"+hourQaulif).val() !== blank) {
+    $("#clock"+$(this).val()).append("&nbsp;<i class='fas fa-comment-alt'></i>");
     hourlyPlans[log] = $("textarea"+hourQaulif).val();
     localStorage.setItem('hourlyPlans', JSON.stringify(hourlyPlans));
     }
@@ -68,6 +94,7 @@ $(".btnDel").click(function (){
     // var blank = "";
     // if ($("textarea"+hourQaulif).val() !== blank) {
     delete hourlyPlans[log];
+    $("#clock"+$(this).val()).empty();
     localStorage.setItem('hourlyPlans', JSON.stringify(hourlyPlans));
     // }
 });
@@ -97,8 +124,8 @@ function initPlans() {
 }
 
 
-  // Function for rendering the data to the planner
-  function renderPlans() {
+// Function for rendering the data to the planner
+function renderPlans() {
     
     function filterLogs(accepted) {
         var result = {};
@@ -110,11 +137,21 @@ function initPlans() {
         return result;
     }
 
+    // $("textarea").each(function() {
+        // var empty = "";
+        // if (filterLogs(["log" + $(this).attr("id")])) {
+        //     $("#clock"+$(this).attr("id")).append("&nbsp;<i class='fas fa-comment-alt'></i>");
+            // $(this).text(hourlyPlans["log" + $(this).attr("id")]);
+            // console.log(hourlyPlans["log" + $(this).attr("id")]);
+        // }
+    // });
+    
     $("textarea").each(function() {
-        if (filterLogs(["log" + $(this).attr("id")]) !==  null) {
+        if (hourlyPlans["log" + $(this).attr("id")]) {
+            $("#clock"+$(this).attr("id")).append("&nbsp;<i class='fas fa-comment-alt'></i>");
             $(this).text(hourlyPlans["log" + $(this).attr("id")]);
+            console.log(hourlyPlans["log" + $(this).attr("id")]);
         }
     });
-    
 
 }

@@ -19,14 +19,19 @@ textarea{
 .past {
   background-color: #343a40;
   color: white;
+  font-size: 1em;
 }
 
 .present {
   background-color: goldenrod;
+  color: rgb(44, 44, 44);
+  font-size: 1em;
 }
 
 .future {
   background-color: #a4cca4;
+  color: rgb(44, 44, 44);
+  font-size: 1em;
 }
 
 .txtAux {
@@ -43,10 +48,18 @@ textarea{
   font-size: 1.5em;
 }
 
+i.txtAuxSave:hover {
+  color: rgb(173, 133, 32);
+} 
+
 .txtAuxDel {
   color: crimson;
   font-size: 1.5em;
 }
+
+i.txtAuxDel:hover {
+  color: rgb(161, 20, 49);
+} 
 
 textarea {
   background: transparent;
@@ -57,14 +70,19 @@ textarea {
   opacity: 1;
 }
 
-/* @media only screen and (max-width: 992px) {
-  .container {
-    min-width: 992px;
-  }
-} */
-/* 
-@media only screen and (max-width: 744px) {
-  .txtAuxSave, .txtAuxDel {
-      font-size: 1.2em;
-  }
-} */
+.expand {
+  font-size: 1em;
+}
+
+.form-control::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: white;
+}
+
+.form-control::-ms-input-placeholder {
+  color: white;
+}

@@ -14,7 +14,7 @@
     <body class="container">
 
         <div class="row">
-            <div class="col-sm-12 mt-5">
+            <div class="col-sm-12 mt-3">
                 <nav class="navbar navbar-dark bg-dark">
                     <a class="navbar-brand" href="#"><i class="fas fa-drafting-compass txtAux"></i>&nbsp;ORCHESTRATE</a>
                     <ul class="navbar-nav my-auto">
@@ -33,12 +33,12 @@
                         <h5 class="mb-0">
                             <div class="form-row">
                                 <div class="col-10 pl-0 pr-0 my-auto">
-                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                                        <i class="far fa-clock txtAux"></i> 9:00 AM
+                                    <button class="btn collapsed text-left w-100 expand" data-toggle="collapse" data-target="#collapse9" data-slot="9" aria-expanded="false" aria-controls="collapse9">
+                                        <i id="clock9" class="far fa-clock txtAux"></i> 9:00 AM
                                     </button>
                                 </div>
                                 <div class="col-2 text-center my-auto">
-                                    <button id="btn9" class="btn btnEye my-auto w-100"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                    <button id="btn9" class="btn btnEye my-auto w-100"><i id="eye9" class="fas fa-eye-slash txtAuxEye"></i></button>
                                 </div>
                             </div>
                         </h5>
@@ -47,7 +47,7 @@
                         <div class="card-body p-0">
                             <div class="form-row">
                                 <div class="col-10 pr-0">
-                                    <textarea id="9" class="form-control h-100" rows="2"></textarea>
+                                    <textarea id="9" class="form-control h-100" rows="2" placeholder="Enter activity for this hour block"></textarea>
                                 </div>
                                 <div class="col-2 text-center my-auto pl-0">
                                     <button type="button" class="btn btnSave my-auto" value="9"><i class="fas fa-save txtAuxSave"></i></button>
@@ -63,12 +63,12 @@
                         <h5 class="mb-0">
                             <div class="form-row">
                                 <div class="col-10 pl-0 pr-0 my-auto">
-                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
-                                        <i class="far fa-clock txtAux"></i> 10:00 AM
+                                    <button class="btn collapsed text-left w-100 expand" data-toggle="collapse" data-target="#collapse10" data-slot="10" aria-expanded="false" aria-controls="collapse10">
+                                        <i id="clock10" class="far fa-clock txtAux"></i> 10:00 AM
                                     </button>
                                 </div>
                                 <div class="col-2 text-center my-auto">
-                                    <button id="btn10" class="btn btnEye my-auto w-100"><i class="fas fa-eye-slash txtAuxEye"></i></button>
+                                    <button id="btn10" class="btn btnEye my-auto w-100"><i id="eye10" class="fas fa-eye-slash txtAuxEye"></i></button>
                                 </div>
                             </div>
                         </h5>
@@ -77,7 +77,7 @@
                         <div class="card-body p-0">
                             <div class="form-row">
                                 <div class="col-10 pr-0">
-                                    <textarea id="10" class="form-control h-100" rows="2"></textarea>
+                                    <textarea id="10" class="form-control h-100" rows="2" placeholder="Enter activity for this hour block"></textarea>
                                 </div>
                                 <div class="col-2 text-center my-auto pl-0">
                                     <button type="button" class="btn btnSave my-auto" value="10"><i class="fas fa-save txtAuxSave"></i></button>
@@ -89,16 +89,16 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header" id="11AM">
+                    <div class="card-header pt-0 pb-0 pl-1 pr-1" id="11AM">
                         <h5 class="mb-0">
-                            <div class="row my-auto">
-                                <div class="col-10">
-                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
-                                        <i class="far fa-clock txtAux"></i> 11:00 AM
+                            <div class="form-row">
+                                <div class="col-10 pl-0 pr-0 my-auto">
+                                    <button class="btn collapsed text-left w-100 expand" data-toggle="collapse" data-target="#collapse11" data-slot="11" aria-expanded="false" aria-controls="collapse11">
+                                        <i id="clock11" class="far fa-clock txtAux"></i> 11:00 AM
                                     </button>
                                 </div>
-                                <div class="col-2 text-right">
-                                    <button id="btn11" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
+                                <div class="col-2 text-center my-auto">
+                                    <button id="btn11" class="btn btnEye my-auto w-100"><i id="eye11" class="fas fa-eye-slash txtAuxEye"></i></button>
                                 </div>
                             </div>
                         </h5>
@@ -107,7 +107,7 @@
                         <div class="card-body p-0">
                             <div class="form-row">
                                 <div class="col-10 pr-0">
-                                    <textarea id="11" class="form-control" rows="2"></textarea>
+                                    <textarea id="11" class="form-control h-100" rows="2" placeholder="Enter activity for this hour block"></textarea>
                                 </div>
                                 <div class="col-2 text-center my-auto pl-0">
                                     <button type="button" class="btn btnSave my-auto" value="11"><i class="fas fa-save txtAuxSave"></i></button>
@@ -119,16 +119,16 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header" id="12PM">
+                    <div class="card-header pt-0 pb-0 pl-1 pr-1" id="12PM">
                         <h5 class="mb-0">
-                            <div class="row my-auto">
-                                <div class="col-10">
-                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                                        <i class="far fa-clock txtAux"></i> 12:00 PM
+                            <div class="form-row">
+                                <div class="col-10 pl-0 pr-0 my-auto">
+                                    <button class="btn collapsed text-left w-100 expand" data-toggle="collapse" data-target="#collapse12" data-slot="12" aria-expanded="false" aria-controls="collapse12">
+                                        <i id="clock12" class="far fa-clock txtAux"></i> 12:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-right">
-                                    <button id="btn12" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
+                                <div class="col-2 text-center my-auto">
+                                    <button id="btn12" class="btn btnEye my-auto w-100"><i id="eye12" class="fas fa-eye-slash txtAuxEye"></i></button>
                                 </div>
                             </div>
                         </h5>
@@ -137,7 +137,7 @@
                         <div class="card-body p-0">
                             <div class="form-row">
                                 <div class="col-10 pr-0">
-                                    <textarea id="12" class="form-control" rows="2"></textarea>
+                                    <textarea id="12" class="form-control h-100" rows="2" placeholder="Enter activity for this hour block"></textarea>
                                 </div>
                                 <div class="col-2 text-center my-auto pl-0">
                                     <button type="button" class="btn btnSave my-auto" value="12"><i class="fas fa-save txtAuxSave"></i></button>
@@ -149,16 +149,16 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header" id="1PM">
+                    <div class="card-header pt-0 pb-0 pl-1 pr-1" id="1PM">
                         <h5 class="mb-0">
-                            <div class="row my-auto">
-                                <div class="col-10">
-                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
-                                        <i class="far fa-clock txtAux"></i> 1:00 PM
+                            <div class="form-row">
+                                <div class="col-10 pl-0 pr-0 my-auto">
+                                    <button class="btn collapsed text-left w-100 expand" data-toggle="collapse" data-target="#collapse13" data-slot="13" aria-expanded="false" aria-controls="collapse13">
+                                        <i id="clock13" class="far fa-clock txtAux"></i> 1:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-right">
-                                    <button id="btn13" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
+                                <div class="col-2 text-center my-auto">
+                                    <button id="btn13" class="btn btnEye my-auto w-100"><i id="eye13" class="fas fa-eye-slash txtAuxEye"></i></button>
                                 </div>
                             </div>
                         </h5>
@@ -167,7 +167,7 @@
                         <div class="card-body p-0">
                             <div class="form-row">
                                 <div class="col-10 pr-0">
-                                    <textarea id="13" class="form-control" rows="2"></textarea>
+                                    <textarea id="13" class="form-control h-100" rows="2" placeholder="Enter activity for this hour block"></textarea>
                                 </div>
                                 <div class="col-2 text-center my-auto pl-0">
                                     <button type="button" class="btn btnSave my-auto" value="13"><i class="fas fa-save txtAuxSave"></i></button>
@@ -179,16 +179,16 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header" id="2PM">
+                    <div class="card-header pt-0 pb-0 pl-1 pr-1" id="2PM">
                         <h5 class="mb-0">
-                            <div class="row my-auto">
-                                <div class="col-10">
-                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
-                                        <i class="far fa-clock txtAux"></i> 2:00 PM
+                            <div class="form-row">
+                                <div class="col-10 pl-0 pr-0 my-auto">
+                                    <button class="btn collapsed text-left w-100 expand" data-toggle="collapse" data-target="#collapse14" data-slot="14" aria-expanded="false" aria-controls="collapse14">
+                                        <i id="clock14" class="far fa-clock txtAux"></i> 2:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-right">
-                                    <button id="btn14" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
+                                <div class="col-2 text-center my-auto">
+                                    <button id="btn14" class="btn btnEye my-auto w-100"><i id="eye14" class="fas fa-eye-slash txtAuxEye"></i></button>
                                 </div>
                             </div>
                         </h5>
@@ -197,7 +197,7 @@
                         <div class="card-body p-0">
                             <div class="form-row">
                                 <div class="col-10 pr-0">
-                                    <textarea id="14" class="form-control" rows="2"></textarea>
+                                    <textarea id="14" class="form-control h-100" rows="2" placeholder="Enter activity for this hour block"></textarea>
                                 </div>
                                 <div class="col-2 text-center my-auto pl-0">
                                     <button type="button" class="btn btnSave my-auto" value="14"><i class="fas fa-save txtAuxSave"></i></button>
@@ -209,16 +209,16 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header" id="3PM">
+                    <div class="card-header pt-0 pb-0 pl-1 pr-1" id="3PM">
                         <h5 class="mb-0">
-                            <div class="row my-auto">
-                                <div class="col-10">
-                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
-                                        <i class="far fa-clock txtAux"></i> 3:00 PM
+                            <div class="form-row">
+                                <div class="col-10 pl-0 pr-0 my-auto">
+                                    <button class="btn collapsed text-left w-100 expand" data-toggle="collapse" data-target="#collapse15" data-slot="15" aria-expanded="false" aria-controls="collapse15">
+                                        <i id="clock15" class="far fa-clock txtAux"></i> 3:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-right">
-                                    <button id="btn15" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
+                                <div class="col-2 text-center my-auto">
+                                    <button id="btn15" class="btn btnEye my-auto w-100"><i id="eye15" class="fas fa-eye-slash txtAuxEye"></i></button>
                                 </div>
                             </div>
                         </h5>
@@ -227,7 +227,7 @@
                         <div class="card-body p-0">
                             <div class="form-row">
                                 <div class="col-10 pr-0">
-                                    <textarea id="15" class="form-control" rows="2"></textarea>
+                                    <textarea id="15" class="form-control h-100" rows="2" placeholder="Enter activity for this hour block"></textarea>
                                 </div>
                                 <div class="col-2 text-center my-auto pl-0">
                                     <button type="button" class="btn btnSave my-auto" value="15"><i class="fas fa-save txtAuxSave"></i></button>
@@ -239,16 +239,16 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header" id="4PM">
+                    <div class="card-header pt-0 pb-0 pl-1 pr-1" id="4PM">
                         <h5 class="mb-0">
-                            <div class="row my-auto">
-                                <div class="col-10">
-                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
-                                        <i class="far fa-clock txtAux"></i> 4:00 PM
+                            <div class="form-row">
+                                <div class="col-10 pl-0 pr-0 my-auto">
+                                    <button class="btn collapsed text-left w-100 expand" data-toggle="collapse" data-target="#collapse16" data-slot="16" aria-expanded="false" aria-controls="collapse16">
+                                        <i id="clock16" class="far fa-clock txtAux"></i> 4:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-right">
-                                    <button id="btn16" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
+                                <div class="col-2 text-center my-auto">
+                                    <button id="btn16" class="btn btnEye my-auto w-100"><i id="eye16" class="fas fa-eye-slash txtAuxEye"></i></button>
                                 </div>
                             </div>
                         </h5>
@@ -257,7 +257,7 @@
                         <div class="card-body p-0">
                             <div class="form-row">
                                 <div class="col-10 pr-0">
-                                    <textarea id="16" class="form-control" rows="2"></textarea>
+                                    <textarea id="16" class="form-control h-100" rows="2" placeholder="Enter activity for this hour block"></textarea>
                                 </div>
                                 <div class="col-2 text-center my-auto pl-0">
                                     <button type="button" class="btn btnSave my-auto" value="16"><i class="fas fa-save txtAuxSave"></i></button>
@@ -269,16 +269,16 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header" id="5PM">
+                    <div class="card-header pt-0 pb-0 pl-1 pr-1" id="5PM">
                         <h5 class="mb-0">
-                            <div class="row my-auto">
-                                <div class="col-10">
-                                    <button class="btn collapsed text-left w-100" data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
-                                        <i class="far fa-clock txtAux"></i> 5:00 PM
+                            <div class="form-row">
+                                <div class="col-10 pl-0 pr-0 my-auto">
+                                    <button class="btn collapsed text-left w-100 expand" data-toggle="collapse" data-target="#collapse17" data-slot="17" aria-expanded="false" aria-controls="collapse17">
+                                        <i id="clock17" class="far fa-clock txtAux"></i> 5:00 PM
                                     </button>
                                 </div>
-                                <div class="col-2 text-right">
-                                    <button id="btn17" class="btn btnEye w-100"><i class="fas fa-eye-slash txtAuxEye text-center"></i></button>
+                                <div class="col-2 text-center my-auto">
+                                    <button id="btn17" class="btn btnEye my-auto w-100"><i id="eye17" class="fas fa-eye-slash txtAuxEye"></i></button>
                                 </div>
                             </div>
                         </h5>
@@ -287,7 +287,7 @@
                         <div class="card-body p-0">
                             <div class="form-row">
                                 <div class="col-10 pr-0">
-                                    <textarea id="17" class="form-control" rows="2"></textarea>
+                                    <textarea id="17" class="form-control h-100" rows="2" placeholder="Enter activity for this hour block"></textarea>
                                 </div>
                                 <div class="col-2 text-center my-auto pl-0">
                                     <button type="button" class="btn btnSave my-auto" value="17"><i class="fas fa-save txtAuxSave"></i></button>
