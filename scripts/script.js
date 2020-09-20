@@ -1,3 +1,4 @@
+$(document).ready(function() {
 var timeZone = moment.tz.guess(true);
 var time = new Date();
 var timeZoneOffset = time.getTimezoneOffset();
@@ -115,6 +116,14 @@ $(".btnDel").click(function (){
     // Initialization function
 function initPlans() {
     var storedPlans = JSON.parse(localStorage.getItem("hourlyPlans"));
+    var visitedPlans = JSON.parse(localStorage.getItem("visitedPlans"));
+    console.log(visitedPlans);
+
+    if (visitedPlans === null) {
+        visitedPlans = ["visited"];
+        $('#infoModalLong').modal('show');
+        localStorage.setItem('visitedPlans', JSON.stringify(visitedPlans));
+      }
     
     if (storedPlans !== null) {
       hourlyPlans = storedPlans;
@@ -155,3 +164,5 @@ function renderPlans() {
     });
 
 }
+
+});

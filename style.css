@@ -86,3 +86,11 @@ textarea {
 .form-control::-ms-input-placeholder {
   color: white;
 }
+
+.infoCard {
+  background-color: #343a40;
+}
+
+.infoIcon {
+  color: goldenrod;
+}
