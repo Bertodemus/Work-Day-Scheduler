@@ -90,6 +90,7 @@ $(".btnSave").click(function (){
 });
 
 $(".btnDel").click(function (){
+    $("textarea#"+$(this).val()).val("");
     var log = "log" + $(this).val();
     // var hourQaulif = "#" + $(this).val();
     // var blank = "";
@@ -117,7 +118,6 @@ $(".btnDel").click(function (){
 function initPlans() {
     var storedPlans = JSON.parse(localStorage.getItem("hourlyPlans"));
     var visitedPlans = JSON.parse(localStorage.getItem("visitedPlans"));
-    console.log(visitedPlans);
 
     if (visitedPlans === null) {
         visitedPlans = ["visited"];
@@ -159,7 +159,6 @@ function renderPlans() {
         if (hourlyPlans["log" + $(this).attr("id")]) {
             $("#clock"+$(this).attr("id")).append("&nbsp;<i class='fas fa-comment-alt'></i>");
             $(this).text(hourlyPlans["log" + $(this).attr("id")]);
-            console.log(hourlyPlans["log" + $(this).attr("id")]);
         }
     });
 
