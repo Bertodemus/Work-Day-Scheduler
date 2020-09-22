@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+//Variable assignments
 var timeZone = moment.tz.guess(true);
 var time = new Date();
 var timeZoneOffset = time.getTimezoneOffset();
@@ -8,6 +10,13 @@ var buttClicked;
 
 
 //App startup
+//Clock Updating
+$("#time").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a") + " " + moment.tz.zone(timeZone).abbr(timeZoneOffset));
+
+setInterval(function() {
+    $("#time").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a") + " " + moment.tz.zone(timeZone).abbr(timeZoneOffset));
+}, 1000);
+
 //checking for current time and determining which background to apply to the time blocks
 $("textarea").each(function() {
     var currentHour = parseInt(moment().format("H"));
@@ -26,8 +35,10 @@ $("textarea").each(function() {
 });
 
 
+//Controls
 //At a glance button functionality
 $(".btnEye").click(glance);
+$(".expand").click(eyes);
 
 function glance() {
     if (!aaGlance) {
@@ -44,8 +55,6 @@ function glance() {
         aaGlance = false;
     }
 }
-
-$(".expand").click(eyes);
 
 function eyes() {
     var eyeToPoke = $(this).data("slot");
@@ -68,57 +77,37 @@ function eyes() {
     buttClicked = "#eye" + eyeToPoke;
 }
 
-
-//Clock Updating
-$("#time").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a") + " " + moment.tz.zone(timeZone).abbr(timeZoneOffset));
-
-setInterval(function() {
-    $("#time").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a") + " " + moment.tz.zone(timeZone).abbr(timeZoneOffset));
-}, 1000);
-
-
 //data handling
 $(".btnSave").click(function (){
     var log = "log" + $(this).val();
     var hourQaulif = "#" + $(this).val();
     var blank = "";
     if ($("textarea"+hourQaulif).val() !== blank) {
-    $("#clock"+$(this).val()).append("&nbsp;<i class='fas fa-comment-alt'></i>");
-    hourlyPlans[log] = $("textarea"+hourQaulif).val();
-    localStorage.setItem('hourlyPlans', JSON.stringify(hourlyPlans));
+        $("#clock"+$(this).val()).empty();
+        $("#clock"+$(this).val()).append("&nbsp;<i class='fas fa-comment-alt'></i>");
+        hourlyPlans[log] = $("textarea"+hourQaulif).val();
+        localStorage.setItem('hourlyPlans', JSON.stringify(hourlyPlans));
     }
 });
 
 $(".btnDel").click(function (){
     $("textarea#"+$(this).val()).val("");
     var log = "log" + $(this).val();
-    // var hourQaulif = "#" + $(this).val();
-    // var blank = "";
-    // if ($("textarea"+hourQaulif).val() !== blank) {
     delete hourlyPlans[log];
     $("#clock"+$(this).val()).empty();
     localStorage.setItem('hourlyPlans', JSON.stringify(hourlyPlans));
-    // }
+
 });
 
 
-//planner presentation and data management
-    // Function for initializing the "plans" data
-    initPlans();
+//planner presentation and data initialization
+// Function for initializing the "plans" data
+initPlans();
 
-    // EventListener for clearing the locally stored plans
-// clearScore.addEventListener("click", function(){
-//     localStorage.clear();
-//     scoreModalList.innerHTML = "";
-// });
-
-
-
-    // Initialization function
+// Initialization function
 function initPlans() {
     var storedPlans = JSON.parse(localStorage.getItem("hourlyPlans"));
     var visitedPlans = JSON.parse(localStorage.getItem("visitedPlans"));
-
     if (visitedPlans === null) {
         visitedPlans = ["visited"];
         $('#infoModalLong').modal('show');
@@ -128,32 +117,11 @@ function initPlans() {
     if (storedPlans !== null) {
       hourlyPlans = storedPlans;
     }
-
     renderPlans();
 }
 
-
 // Function for rendering the data to the planner
 function renderPlans() {
-    
-    function filterLogs(accepted) {
-        var result = {};
-        for (var logged in hourlyPlans) {
-            if (accepted.indexOf(logged) > -1) {
-                result[logged] = hourlyPlans[logged];
-            }
-        }
-        return result;
-    }
-
-    // $("textarea").each(function() {
-        // var empty = "";
-        // if (filterLogs(["log" + $(this).attr("id")])) {
-        //     $("#clock"+$(this).attr("id")).append("&nbsp;<i class='fas fa-comment-alt'></i>");
-            // $(this).text(hourlyPlans["log" + $(this).attr("id")]);
-            // console.log(hourlyPlans["log" + $(this).attr("id")]);
-        // }
-    // });
     
     $("textarea").each(function() {
         if (hourlyPlans["log" + $(this).attr("id")]) {
@@ -161,7 +129,6 @@ function renderPlans() {
             $(this).text(hourlyPlans["log" + $(this).attr("id")]);
         }
     });
-
 }
 
 });
