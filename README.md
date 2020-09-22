@@ -33,7 +33,7 @@ A simple hour-by-hour work day scheduler. This application runs in the browser a
 
 ### Screenshots
 
-![Quiz main menu](/images/screen1.png)
-![Quiz question](/images/screen2.png)
-![Quiz name entry](/images/screen3.png)
-![Quiz scores](/images/screen4.png)
+![modal view](/images/modal.png)
+![Initial view](/images/view1.png)
+![Collapsed view](/images/view2.png)
+![Expanded view](/images/view3.png)
