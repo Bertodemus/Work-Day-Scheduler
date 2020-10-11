@@ -18,7 +18,7 @@ A simple hour-by-hour work day scheduler. This application runs in the browser a
     * Each hour block has a header that indicates the hour and whether or not there is an entry for this block.
 * There are a few buttons to familiarize yourself with:
     * Clicking on the header of the hour block will expand or collapse the view
-    * Gold disk will save your entry
+    * Gold diskette will save your entry
     * Crimson garbage can will delete your entry
     * The gold eye icons will perform an "At A Glance" view, which will open every hour block so that you can get an overview of         your entire day. Clicking the gold eye/"view status" icon again will collapse all of the hour blocks."
         * These icons also indicate an expanded or collapsed hour block
