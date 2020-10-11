@@ -3,7 +3,7 @@ A simple hour-by-hour work day scheduler. This application runs in the browser a
 
 ## Overview
 
-* Quiz design consists of: `index.html`, `style.css`, `bootstrap.css`, `script.js`, and `moment.js`
+* Scheduler design consists of: `index.html`, `style.css`, `bootstrap.css`, `script.js`, and `moment.js`
 * Bootstrap 4 was utilized to create the layout
 
 ## Application Description
